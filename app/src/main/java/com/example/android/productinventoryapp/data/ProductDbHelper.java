@@ -11,14 +11,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.android.productinventoryapp.data.ProductContract.ProductEntry;
 
 /**
- * Database helper for Inventory app. Manages database creation and version management.
+ * Database helper for Inventory app.
  */
 public class ProductDbHelper extends SQLiteOpenHelper {
 
     /**
      * Name of the database file
      */
-    private static final String DATABASE_NAME = "inventory.db";
+    private static final String DATABASE_NAME = "productinventoryapp.db";
 
     /**
      * Database version. If you change the database schema, you must increment the database version.

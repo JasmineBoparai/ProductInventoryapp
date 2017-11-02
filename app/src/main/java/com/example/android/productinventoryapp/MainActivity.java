@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu options from the res/menu/menu_catalog.xml file.
         // This adds menu items to the app bar.
-        getMenuInflater().inflate(R.menu.menu_catalog, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -128,10 +128,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
-        values.put(ProductEntry.COLUMN_PRODUCT_NAME, "Jump Rope");
-        values.put(ProductEntry.COLUMN_PRODUCT_PRICE, 13.99);
-        values.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, 33);
-        values.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER, "Big 5 Sporting Goods");
+        values.put(ProductEntry.COLUMN_PRODUCT_NAME, "Sound Bar");
+        values.put(ProductEntry.COLUMN_PRODUCT_PRICE, 599.99);
+        values.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, 20);
+        values.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER, "Best Buy");
 
         // Insert a new row for Jump Rope into the provider using the ContentResolver.
         // Use the {@link ProductEntry#CONTENT_URI} to indicate that we want to insert

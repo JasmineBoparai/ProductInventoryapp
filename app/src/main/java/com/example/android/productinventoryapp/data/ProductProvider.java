@@ -38,9 +38,7 @@ public class ProductProvider extends ContentProvider {
     private static final int PRODUCT_ID = 101;
 
     /**
-     * UriMatcher object to match a content URI to a corresponding code.
-     * The input passed into the constructor represents the code to return for the root URI.
-     * It's common to use NO_MATCH as the input for this case.
+     * UriMatcher object to match a content URI to a corresponding code
      */
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
@@ -92,8 +90,6 @@ public class ProductProvider extends ContentProvider {
                 throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
-        // Set notification URI on the Cursor,
-        // so we know what content URI the Cursor was created for.
         // If the data at this URI changes, then we know we need to update the Cursor.
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
@@ -182,8 +178,7 @@ public class ProductProvider extends ContentProvider {
     }
 
     /**
-     * Update products in the database with the given content values. Apply the changes to the rows
-     * specified in the selection and selection arguments (which could be 0 or 1 or more products).
+     * Update products in the database with the given content values.
      * Return the number of rows that were successfully updated.
      */
     private int updateProduct(Uri uri, ContentValues values, String selection, String[] selectionArgs) {

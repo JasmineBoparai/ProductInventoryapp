@@ -17,10 +17,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -34,12 +34,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.productinventoryapp.data.ProductContract.ProductEntry;
+
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Locale;
-
-import com.example.android.productinventoryapp.data.ProductContract.ProductEntry;
 
 /**
  * Allows user to create a new product or edit an existing one.
@@ -450,10 +450,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
     /**
      * Show a dialog that warns the user there are unsaved changes that will be lost
-     * if they continue leaving the editor.
-     *
-     * @param discardButtonClickListener is the click listener for what to do when
-     *                                   the user confirms they want to discard their changes
+     * if they continue leaving the editor
      */
     private void showUnsavedChangesDialog(
             DialogInterface.OnClickListener discardButtonClickListener) {

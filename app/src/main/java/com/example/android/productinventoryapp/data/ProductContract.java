@@ -9,15 +9,13 @@ import android.provider.BaseColumns;
  */
 
 public class ProductContract {
-    // To prevent someone from accidentally instantiating the contract class,
-    // give it an empty constructor.
     private ProductContract() {
     }
 
     /**
      * The "Content authority" is a name for the entire content provider.
      */
-    public static final String CONTENT_AUTHORITY = "com.example.android.inventory";
+    public static final String CONTENT_AUTHORITY = "com.example.android.productinventoryapp";
 
     /**
      * Use CONTENT_AUTHORITY to create the base of all URI's which apps will use to contact
@@ -32,7 +30,6 @@ public class ProductContract {
 
     /**
      * Inner class that defines constant values for the products database table.
-     * Each entry in the table represents a single product.
      */
     public static final class ProductEntry implements BaseColumns {
 
@@ -47,44 +44,32 @@ public class ProductContract {
         public final static String TABLE_NAME = "products";
 
         /**
-         * Unique ID number for the product (only for use in the database table).
-         * <p/>
-         * Type: INTEGER
+         * Unique ID number for the product
          */
         public final static String _ID = BaseColumns._ID;
 
         /**
-         * Name of the product.
-         * <p/>
-         * Type: TEXT
+         * Name of the product
          */
         public final static String COLUMN_PRODUCT_NAME = "name";
 
         /**
-         * Price of the product.
-         * <p/>
-         * Type: REAL
+         * Price of the product
          */
         public final static String COLUMN_PRODUCT_PRICE = "price";
 
         /**
-         * Quantity of the product.
-         * <p/>
-         * Type: INTEGER
+         * Quantity of the product
          */
         public final static String COLUMN_PRODUCT_QUANTITY = "quantity";
 
         /**
-         * Supplier of the product.
-         * <p/>
-         * Type: TEXT
+         * Supplier of the product
          */
         public final static String COLUMN_PRODUCT_SUPPLIER = "supplier";
 
         /**
-         * Image Uri of the product.
-         * <p/>
-         * Type: TEXT
+         * Image Uri of the product
          */
         public final static String COLUMN_PRODUCT_IMAGE = "image";
 
